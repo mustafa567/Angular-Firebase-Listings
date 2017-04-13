@@ -1,0 +1,35 @@
+<a [routerLink]="['/listings']">Back</a>
+
+<form (submit)="onAdSubmit()">
+  <div class="form-group">
+    <label for="title">Title</label> <input type="text" placeholder="Title" [(ngModel)]="title" name="title" class="form-control"
+      required>
+  </div>
+
+  <div class="form-group">
+    <label for="owner">Owner</label> <input type="text" name="owner" [(ngModel)]="owner" class="form-control" required>
+  </div>
+  <div class="form-group">
+    <label for="city">City</label> <input type="text" placeholder="City" [(ngModel)]="city" name="city" class="form-control"
+      required>
+  </div>
+  <div class="form-group">
+    <label for="bed">Bedrooms</label> <input type="text" placeholder="Bedrooms" [(ngModel)]="bed" name="bed" class="form-control"
+      required>
+  </div>
+  <div class="form-group">
+    <label for="type">Type</label>
+    <select class="form-control" type="text" name="type" [(ngModel)]="type">
+      <option value="Estate">Estate</option>
+      <option value="Condo">Condo</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="price">Price</label> <input type="text" placeholder="Price" [(ngModel)]="price" name="price" class="form-control"
+      required>
+  </div>
+  <div class="form-group">
+    <input id="image" name="image" [(ngModel)]="image" type="file">
+  </div>
+  <button class="btn btn-primary" data-ember-action="" data-ember-action-456="456">Submit</button>
+</form>
